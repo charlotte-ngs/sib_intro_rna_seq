@@ -1,0 +1,50 @@
+---
+title: General Information on Course
+author: Peter von Rohr
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Disclaimer
+
+# Google Doc
+Available under: https://docs.google.com/document/d/1IGgJFaH-mTfcx0a5EZ2WO7DeBSG74gDRvmh0c1zjKLM/edit#
+
+
+# Specific Info from the Google Doc
+
+Website : https://sib-swiss.github.io/RNAseq-introduction-training/index.html
+
+Zoom : https://us02web.zoom.us/j/81093359703?pwd=TDV6SnFPTkxJWWQ0OGRVTkVBU1FOdz09
+
+This document : https://docs.google.com/document/d/1IGgJFaH-mTfcx0a5EZ2WO7DeBSG74gDRvmh0c1zjKLM/edit?usp=sharing
+
+
+# References
+
+* Biological replicates: Soneson & Delorenzi 2013 BMC Bioinformatics
+
+
+# Practical
+
+Login: 
+
+```
+ssh user26@86.119.34.176
+slurm_cluster
+```
+
+Rstudio instance: https://fl-0-176.zhdk.cloud.switch.ch/
+
+Counts file: /shared/data/Solutions/Ruhland2016/countFiles/fC_all.counts
+
+
+You can give your feedback about this course here:
+https://edu.sib.swiss/course/view.php?id=530
+login: rnaseq21
+password: SIB-rnaseq21
+Monique will also send you an email about it.

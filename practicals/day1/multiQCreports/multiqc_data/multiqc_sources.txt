@@ -1,0 +1,9 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR1272190_1	/shared/home/user26/day1/fastqc_Liu2015/batch_array/FASTQC_Liu2015/SRR1272190_1_fastqc.zip
+FastQC	all_sections	SRR1272187_2	/shared/home/user26/day1/fastqc_Liu2015/batch_array/FASTQC_Liu2015/SRR1272187_2_fastqc.zip
+FastQC	all_sections	SRR1272187_1	/shared/home/user26/day1/fastqc_Liu2015/batch_array/FASTQC_Liu2015/SRR1272187_1_fastqc.zip
+FastQC	all_sections	SRR1272191_1	/shared/home/user26/day1/fastqc_Liu2015/batch_array/FASTQC_Liu2015/SRR1272191_1_fastqc.zip
+FastQC	all_sections	SRR1272191_2	/shared/home/user26/day1/fastqc_Liu2015/batch_array/FASTQC_Liu2015/SRR1272191_2_fastqc.zip
+FastQC	all_sections	SRR1272190_2	/shared/home/user26/day1/fastqc_Liu2015/batch_array/FASTQC_Liu2015/SRR1272190_2_fastqc.zip
+FastQC	all_sections	SRR1272188_2	/shared/home/user26/day1/fastqc_Liu2015/batch_array/FASTQC_Liu2015/SRR1272188_2_fastqc.zip
+FastQC	all_sections	SRR1272188_1	/shared/home/user26/day1/fastqc_Liu2015/batch_array/FASTQC_Liu2015/SRR1272188_1_fastqc.zip
