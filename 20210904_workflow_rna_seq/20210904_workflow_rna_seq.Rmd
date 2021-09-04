@@ -1,0 +1,46 @@
+---
+title: Work Flow for RNA Seq Data Analysis
+author: Peter von Rohr
+date: 2021-09-04
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Disclaimer
+The workflow described below is taken from the SIB-course "Introduction to RNA-SEQ".
+
+
+# Assumption
+In the course, it was assumed that some transcriptome sequences were the result of sequencing efforts done in the lab. The results of the sequencing consist of so-called sequencing reads and these reads are stored in so-called FASTQ-files. These are textfiles in a special format. The format is also described in one of the presentations of the course.
+
+In what follows all the required steps to come up with results of a set of differentially expressed genes is given.
+
+
+# Step 1: Quality Control
+The quality of the given sequence reads in the FASTQ-files have to be checked. This check is done with a programs called `fastqc`. The `fastqc` program produces a single html-report per FASTQ-file. Hence when there are many FASTQ-files, there will be many html-report files. The reports can be summarized using the program `multiqc`. 
+
+Depending on the quality of the sequenec reads and also depending on the use of the results, the reads have to be trimmed. This is done by a program called `trimmomatic`. For differential expression, trimming the sequences is not recommended. Also some of the aligners can take into account the different quality levels of the reads making the process of sequence trimming obsolete.
+
+
+# Step 2: Alignment or Mapping
+To be able to quantify the expression level of a given gene or a given transcript, the sequence reads must be first mapped on to a reference genome. Then the aligned reads are counted. The alignment is done with programs that are commonly referred to as _aligners_. There is a number of aligners available (BWT, bowtie, STAR, ...). The choice of the aligner depends on the type of analysis that should be done with the reads. For variant finding and/or genome assembly different aligners should be chosen. In this course STAR was used to do the alignment.
+
+STAR works in two steps. First an index of the reference genome has to be built. For each reference genome the index building step only has to be done once. In a second step, the index and the alignment reads are aligned to the reference genome. The result of the alignment are so-called sam- or bam-files where the latter is just a binary representation of the former. Because, we want to save space, the bam-files are preferred.
+
+The program `multiqc` can be used on the results of the alignments producing similar reports based on the alignmnents.
+
+
+# Step 3: Feature Count
+The program `featureCount` takes the bam-files as input and outputs the count for the aligned reads. The STAR-aligner also produces feature counts which were used in the course to validate the featureCount results.
+
+
+# Step 4: Assess Differential Expression
+The programs `DESeq2` and `edgeR` were used to assess the levels of differential expression for each gene. The results were presented by many graphs which made them intuitive to understand. Both programs yielded comparable results. 
+
+
+# Step 5: Further Analysis
+Analysis of over- and under-representation of different GO-terms and or pathways can be done with a R package called `clusterProfiler`. 
+
